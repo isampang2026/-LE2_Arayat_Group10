@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@600&display=swap');
 
 body {
     width: 100%;
@@ -51,27 +52,51 @@ main {
 }
 
 #desc {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Alice', sans-serif;;
     color: rgb(243, 237, 229);
     text-align: center;
     padding: 10px;
     font-size: 20px;
-}  
-  .card-img-top {
+}
+
+.card-img-top {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-  }
+}
   
-  section {
+section {
     padding: 30px 10px;
-  }
+}
   
-  .text-center {
+.text-center {
     padding: 50px 10px;
-  }
+}
   
-  #cart {
+#cart {
     width: 50px;
-  }
+}
+
+h3{
+    color: white;
+    font-family: 'Pathway Extreme', sans-serif;
+    margin-left: 60px;
+}
+
+#kings-choice{
+    background-color: #fff1e2;
+}
+
+#fiels-favorites{
+    background-color: #f6e7db;
+}
+
+#ingrids-picks{
+    background-color: #fff1e2;
+}
+
+#check-out{
+    background-color: #a42529;
+    color: white;
+}
