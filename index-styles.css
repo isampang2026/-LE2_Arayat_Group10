@@ -100,3 +100,11 @@ h3{
     background-color: #a42529;
     color: white;
 }
+
+.card-title{
+    font-family: 'Pathway Extreme', sans-serif;
+}
+
+.card-body{
+    font-family: 'Pathway Extreme', sans-serif;
+}
