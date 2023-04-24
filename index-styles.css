@@ -51,14 +51,6 @@ main {
     color:rgb(243, 237, 229);
 }
 
-#desc {
-    font-family: 'Alice', sans-serif;;
-    color: rgb(243, 237, 229);
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-}
-
 .card-img-top {
     display: block;
     margin-left: auto;
@@ -79,7 +71,7 @@ section {
 }
 
 h3{
-    color: white;
+    color: black;
     font-family: 'Pathway Extreme', sans-serif;
     margin-left: 60px;
 }
@@ -141,4 +133,13 @@ footer {
     padding: 20px;
     height: 75px;
     text-align: center;
+    color: black;
+}
+
+form{
+    font-family: 'Pathway Extreme', sans-serif;
+}
+
+footer{
+    font-family: 'Pathway Extreme', sans-serif;
 }
