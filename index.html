@@ -21,9 +21,6 @@
     </main>
         <section id="kings-choice">
           <h3>King's Choice</h3>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a href="#checkout"><img src="shoppingcart.png" alt="shoppingcart" id="cart"></a>
-          </div>
           <div class="container text-center">
             <div class="row align-items-start">
               <div class="col">
@@ -32,7 +29,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Yakisoba</h5>
                     <p class="card-text">PHP 170.00</p>
-                    <button class="btn btn-primary" id="card1item1" value="card1item1" onclick="btnPress()">Add to cart</a>
+                    <button class="btn btn-primary" id="item1" value="Yakisoba" onclick="postItem1()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -42,7 +39,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Carrot Cake Slice</h5>
                     <p class="card-text">PHP 80.00</p>
-                    <button class="btn btn-primary" id="card1item2" value="card1item2">Add to cart</a>
+                    <button class="btn btn-primary" id="item2" value="Carrot Cake" onclick="postItem2()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -52,7 +49,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Matcha Latte</h5>
                     <p class="card-text">PHP 120.00</p>
-                    <button class="btn btn-primary" id="card1item3" value="card1item3">Add to cart</a>
+                    <button class="btn btn-primary" id="item3" value="Matcha Latte" onclick="postItem3()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -69,7 +66,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Carbonara</h5>
                     <p class="card-text">PHP 140.00</p>
-                    <button class="btn btn-primary" id="card2item1" value="card2item1">Add to cart</a>
+                    <button class="btn btn-primary" id="item4" value="Carbonara" onclick="postItem4()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -79,7 +76,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Pancakes</h5>
                     <p class="card-text">PHP 90.00</p>
-                    <button class="btn btn-primary" id="card2item2" value="card2item2">Add to cart</a>
+                    <button class="btn btn-primary" id="item5" value="Pancakes" onclick="postItem5()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -89,7 +86,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Iced Tea</h5>
                     <p class="card-text">PHP 80.00</p>
-                    <button class="btn btn-primary" id="card2item3" value="card2item3">Add to cart</a>
+                    <button class="btn btn-primary" id="item6" value="Iced Tea" onclick="postItem6()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -106,7 +103,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. fsdfsdafsdfsdaf</p>
-                    <button class="btn btn-primary" id="card3item1" value="card3item1">Add to cart</a>
+                    <button class="btn btn-primary" id="item7" value="card3item1" onclick="postItem7()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -116,7 +113,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. fsdfsdafsdfsdaf</p>
-                    <button class="btn btn-primary" id="card3item2" value="card3item2">Add to cart</a>
+                    <button class="btn btn-primary" id="item8" value="card3item2" onclick="postItem8()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -126,7 +123,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. fsdfsdafsdfsdaf</p>
-                    <button class="btn btn-primary" id="card3item3" value="card3item3" onclick="btn">Add to cart</a>
+                    <button class="btn btn-primary" id="item9" value="card3item3" onclick="postItem9()">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -138,26 +135,101 @@
           <ul id="list" class="list-group"></ul>
         </section>
         <script>
-          var items = [];
-
-          function showItems() {
+          
+        var items = [];
+        /*
+            message, datetime
+        */
+        function showComments() {
             if(items.length == 0) {
-              document.getElementById("list").innerHTML = '<li><em>No comments</em></li>';
+                document.getElementById("list").innerHTML = '<li><em>No items</em></li>';
             } else {
-              document.getElementById("list").innerHTML = "";
-              for(var i=0; i<list.length; i++) {
-                document.getElementById("list").innerHTML += '<li>' + comments[i].message + '<br>' + comments[i].datetime + '<br><button onclick="remove(' + i +')">Remove</button></li>'
-              }
+                document.getElementById("list").innerHTML = "";
+                for(var i=0; i<items.length; i++) {
+                    document.getElementById("list").innerHTML += '<li>'+ items[i].message + '<br><button onclick="remove(' + i +')">Remove</button></li>'
+                }
             }
-          }
-
-          function addtoCart() {
-            var msg = document.getElementsByClassName("btn").value;
-            var comment = {message: msg, datetime: new Date()};
-            comments.push(comment);
+        }
+        function postItem1() {
+            var msg = document.getElementById("item1").value;
+            var comment = {message: msg};
+            items.push(comment);
             showComments();
-            document.get
-          }
+            document.getElementById("item1").value = "";
+        }
+
+        function postItem2() {
+            var msg = document.getElementById("item2").value;
+            var comment = {message: msg};
+            items.push(comment);
+            showComments();
+            document.getElementById("item2").value = "";
+        }
+
+        function postItem3() {
+            var msg = document.getElementById("item3").value;
+            var comment = {message: msg};
+            items.push(comment);
+            showComments();
+            document.getElementById("item3").value = "";
+        }
+
+        function postItem4() {
+            var msg = document.getElementById("item4").value;
+            var comment = {message: msg};
+            items.push(comment);
+            showComments();
+            document.getElementById("item4").value = "";
+        }
+
+        function postItem5() {
+            var msg = document.getElementById("item5").value;
+            var comment = {message: msg};
+            items.push(comment);
+            showComments();
+            document.getElementById("item5").value = "";
+        }
+
+        function postItem6() {
+            var msg = document.getElementById("item6").value;
+            var comment = {message: msg};
+            items.push(comment);
+            showComments();
+            document.getElementById("item6").value = "";
+        }
+
+        function postItem7() {
+            var msg = document.getElementById("item7").value;
+            var comment = {message: msg};
+            items.push(comment);
+            showComments();
+            document.getElementById("item7").value = "";
+        }
+
+        function postItem8() {
+            var msg = document.getElementById("item8").value;
+            var comment = {message: msg};
+            items.push(comment);
+            showComments();
+            document.getElementById("item8").value = "";
+        }
+
+        function postItem9() {
+            var msg = document.getElementById("item9").value;
+            var comment = {message: msg};
+            items.push(comment);
+            showComments();
+            document.getElementById("item9").value = "";
+        }
+        function removeLastComment() {
+            items.pop();
+            showComments();
+        }
+        function remove(i) {
+            items.splice(i,1);
+            showComments();
+        }
+    
         </script>  
 </body>
 </html>
