@@ -20,11 +20,8 @@
         <div id="desc"></div>
         </div>
     </main>
-        <section id="kings-choice">
-          <h3>King's Choice</h3>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a href="#checkout"><img src="shoppingcart.png" alt="shoppingcart" id="cart"></a>
-          </div>
+        <section>
+          <h3>Category 1</h3>
           <div class="container text-center">
             <div class="row align-items-start">
               <div class="col">
@@ -60,8 +57,8 @@
             </div>
           </div>
         </section>
-        <section id="fiels-favorites">
-          <h3>Fiel's Favorites</h3>
+        <section>
+          <h3>Category 2</h3>
           <div class="container text-center">
             <div class="row align-items-start">
               <div class="col">
@@ -97,8 +94,8 @@
             </div>
           </div>
         </section>
-        <section id="ingrids-picks">
-          <h3>Ingrid's Picks</h3>
+        <section>
+          <h3>Category 3</h3>
           <div class="container text-center">
             <div class="row align-items-start">
               <div class="col">
@@ -133,60 +130,37 @@
               </div>
             </div>
           </div>
-        </section>
-        <section id="check-out">
-          <h3 id="checkout">Check Out</h3>
-          <ul id="list" class="list-group"></ul>
+        </section><hr/>
+        <section>
+          <h3>Check Out</h3>
+          <ul id="list" class="list-group">
+            <li>
+
+            </li>
+          </ul>
         </section>
   
         <script>
-          function addToList(word){
-                  document.getElementById("list").innerHTML += "<li class='list-group-item' onclick='showItem(event)'>"+ word + "</li>"; 
+          var items = [];
+
+          function showItems() {
+            if(items.length == 0) {
+              document.getElementById("list").innerHTML = '<li><em>No comments</em></li>';
+            } else {
+              document.getElementById("list").innerHTML = "";
+              for(var i=0; i<list.length; i++) {
+                document.getElementById("list").innerHTML += '<li>' + comments[i].message + '<br>' + comments[i].datetime + '<br><button onclick="remove(' + i +')">Remove</button></li>'
               }
-              
-              function btnPress() { 
-                  var f = document.getElementById("list").value; addToList(f); document.getElementsByClassName("btn").value = ""; 
-              } 
-  
-              function showItem(event) { 
-                  alert(event.target.innerHTML); 
-              }
-  
-              function btnPress1() {
-                  var r = document.getElementById("myBtn4").value;
-                  document.getElementById("demo").innerHTML = demo += "R";
-                  document.getElementById('myBtn4').disabled = true;
-              }
-              
-              function btnPress2() {
-                  var r = document.getElementById("myBtn4").value;
-                  document.getElementById("demo").innerHTML = demo += "R";
-                  document.getElementById('myBtn4').disabled = true;
-              }
-  
-              function btnPress3() {
-                  var r = document.getElementById("myBtn4").value;
-                  document.getElementById("demo").innerHTML = demo += "R";
-                  document.getElementById('myBtn4').disabled = true;
-              }
-  
-              function btnPress4() {
-                  var r = document.getElementById("myBtn4").value;
-                  document.getElementById("demo").innerHTML = demo += "R";
-                  document.getElementById('myBtn4').disabled = true;
-              }
-  
-              function btnPress5() {
-                  var r = document.getElementById("myBtn4").value;
-                  document.getElementById("demo").innerHTML = demo += "R";
-                  document.getElementById('myBtn4').disabled = true;
-              }
-  
-              function btnPress6() {
-                  var r = document.getElementById("myBtn4").value;
-                  document.getElementById("demo").innerHTML = demo += "R";
-                  document.getElementById('myBtn4').disabled = true;
-              }
+            }
+          }
+          
+          function addtoCart() {
+            var msg = document.getElementsByClassName("btn").value;
+            var comment = {message: msg, datetime: new Date()};
+            comments.push(comment);
+            showComments();
+            document.get
+          }
         </script>  
 </body>
 </html>
