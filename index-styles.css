@@ -108,3 +108,37 @@ h3{
 .card-body{
     font-family: 'Pathway Extreme', sans-serif;
 }
+
+
+.input-wrap {
+    position: relative;
+    height: 37px;
+    margin-bottom: 2rem;
+    padding: 23px;
+}
+
+label {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.form-group {
+    display: inline-block;
+  }
+
+.form-check {
+    position: relative;
+}
+
+.form-check-inline {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+footer {
+    background-color: bisque;
+    padding: 20px;
+    height: 75px;
+    text-align: center;
+}
